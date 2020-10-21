@@ -7,6 +7,10 @@ class AppState extends EventEmitter {
 
   /**@type {Poke} */
   currentPoke = null
+
+  /**@type {Poke[]} */
+
+  capturedPoke = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {
