@@ -2,10 +2,11 @@
 export default class Poke {
 
   constructor(data) {
+    this.id = data._id
     this.name = data.name
-    this.moves = data.moves[0].move.name
+    this.moves = data.name || data.moves[0].move.name
     this.weight = data.weight
-    this.img = data.sprites.front_default
+    this.img = data.img || data.sprites.front_default
     this.height = data.height
 
   }
@@ -21,7 +22,14 @@ export default class Poke {
     <h3>Height: ${this.height}</h3>
     </div>
     </div>
-    
+    ${this.Button}
     `
+  }
+
+  get Button() {
+    if (this.id) {
+      return `<button class="btn btn-danger" onclick="app.capturedPokeController.removePoke()">Remove Pokemon</button>`
+    }
+    return `<button class="btn btn-primary" onclick="app.capturePokeController.capturePoke()">Capture Pokemon</button>`
   }
 }
