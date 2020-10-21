@@ -22,9 +22,15 @@
     </header>
     <main class="container-fluid">
         <div class="row">
-            <div class="col-3 bg-warning sides">Pokemon to Find</div>
+            <div class="col-3 bg-warning sides overflow-auto">
+                <h1>Pokemon to Find</h1>
+                <ul id="pokemon-list"> </ul>
+            </div>
             <div class="col-6 border border-dark shadow-lg"></div>
-            <div class="col-3 bg-warning sides">Captured Pokemon</div>
+            <div class="col-3 bg-warning sides">
+                <h1>Captured Pokemon</h1>
+                <ul id="captured-pokemon"></ul>
+            </div>
         </div>
 
     </main>
@@ -35,7 +41,9 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"
+        integrity="sha512-quHCp3WbBNkwLfYUMd+KwBAgpVukJu5MncuQaWXgCrfgcxCJAq/fo+oqrRKOj+UKEmyMCG3tb8RB63W+EmrOBg=="
+        crossorigin="anonymous"></script>
     <script src="app/main.js" type="module"></script>
 </body>
 
